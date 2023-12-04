@@ -23,7 +23,7 @@ const Nav = () => {
     <div className='flex-between w-full mb-16 pt-3'>
       <Link href='/' className='flex gap-2 flex-center'>
         <Image
-          src='/assets/images/logo.svg'
+          src={'/assets/images/logo.svg'}
           alt='Promptopia Logo'
           width={30}
           height={30}
@@ -31,8 +31,6 @@ const Nav = () => {
         />
         <p className='logo_text'>Promptopia</p>
       </Link>
-
-      {alert(providers)}
 
       {/* Desktop navigation */}
       <div className='sm:flex hidden'>
@@ -48,7 +46,7 @@ const Nav = () => {
 
             <Link href='/profile'>
               <Image
-                src='/assets/images/logo.svg'
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className='rounded-full'
@@ -77,7 +75,7 @@ const Nav = () => {
         {session?.user ? (
           <div className='flex'>
             <Image
-              src='/assets/images/logo.svg'
+              src={session?.user.image}
               width={37}
               height={37}
               className='rounded-full'
