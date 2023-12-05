@@ -34,8 +34,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             <span>(#product, #webdevelopment, #idea)</span>
           </span>
           <input
-            value={post.prompt}
-            onChange={(e) => setPost({ ...post, prompt: e.target.value })}
+            value={post.tag}
+            onChange={(e) => setPost({ ...post, tag: e.target.value })}
             placeholder='#tag'
             required
             className='form_input'
@@ -46,12 +46,13 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <Link href='/' className='text-gray-500 text-sm'>
             Cancel
           </Link>
+
           <button
             type='sibmit'
             disabled={submitting}
             className='px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white'
           >
-            {submitting ? `${type}...` : type}
+            {submitting ? `${type}ing...` : type}
           </button>
         </div>
       </form>
